@@ -47,7 +47,7 @@ function read_all(){
   	}
   });
 }
-var couter = 0;
+var counter = 0;
 function count(){
   $('#counter').text(0);  
 	lawnchair.each(function(derp, i){
