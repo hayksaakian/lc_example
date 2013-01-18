@@ -48,7 +48,7 @@ function read_all(){
   	output.push(dummy.value);
   	if (total - 1 == i){
   		console.log('done reading '+i+' records');
-		  //$('#output').html(output.join('<br>'));  		
+		  $('#output').html(output.join('<br>'));  		
   	}else {
   		if (total % i <= 3){
 	  		console.log(i+'...'+dummy.key)
