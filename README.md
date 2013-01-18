@@ -1,4 +1,4 @@
-lc_example
+broken Lawnchair example
 ==========
 
 this example demonstrates how attempting to access many documents (with large total memory size) quickly leads to a crash.
@@ -10,3 +10,7 @@ this example demonstrates how attempting to access many documents (with large to
 4. reload the page (the script does a recount at the start)
 5. ???
 6. crash!
+
+-----
+
+This example uses lawnchair to access indexeddb
