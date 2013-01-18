@@ -56,6 +56,28 @@ function read_all(){
   	}
   });
 }
+
+function search_for(text){
+  console.log('starting search for '+text);
+  var output = [];
+  var total = counter;
+  lawnchair.each(function(dummy, i){
+    //console.log(dummy.value);
+    if(dummy.value.num.indexOf(text) != -1){
+      console.log(i+'...yes...'+dummy.value.num)
+      output.push(JSON.stringify(i+'...'+dummy.value.num));
+    }
+    if (total - 1 == i){
+      console.log('done reading '+(i+1)+' records');
+      $('#output').html(output.join('<br>'));     
+    }else {
+      if (total % i <= 3){
+        console.log(i+'...'+dummy.value.num)
+      }
+    }
+  });  
+}
+
 function count(){
 	console.log('counting');
   $('#counter').text(0);  
