@@ -81,11 +81,24 @@ function search_for(text){
 function count(){
 	console.log('counting');
   $('#counter').text(0);  
-	lawnchair.all(function(derp){
-		counter = derp.length;
-	  $('#counter').text(counter);  		
-	});
+  // count_with_all();
+  count_with_each();
 }
+
+function count_with_all(){
+  lawnchair.all(function(derp){
+    counter = derp.length;
+    $('#counter').text(counter);      
+  });
+}
+
+function count_with_each(){
+  lawnchair.each(function(derp, i){
+    //$('#counter').text(i+1);  
+    console.log(i)    
+  });
+}
+
 
 // fffb22eb-79e4-5f00-0ada-302d9b66bf43 
 // getSizeOfPersisted('fffb22eb-79e4-5f00-0ada-302d9b66bf43')
