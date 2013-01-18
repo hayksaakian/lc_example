@@ -88,14 +88,15 @@ function count(){
 function count_with_all(){
   lawnchair.all(function(derp){
     counter = derp.length;
-    $('#counter').text(counter);      
+    $('#counter').text(counter);  
+    console.log('done counting '+i)          
   });
 }
 
 function count_with_each(){
   lawnchair.each(function(derp, i){
-    //$('#counter').text(i+1);  
-    console.log(i)    
+    $('#counter').text(i+1); 
+    console.log('maybe done counting '+i) 
   });
 }
 
