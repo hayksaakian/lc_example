@@ -1,4 +1,4 @@
-var lawnchair = Lawnchair({name:'test_db'},function(e){
+var lawnchair = Lawnchair({name:'testing_db'},function(e){
   console.log('storage open');
   count();
 });
@@ -45,9 +45,9 @@ function read_all(){
 	var total = counter;
   lawnchair.each(function(dummy, i){
   	//console.log(dummy.value);
-  	output.push(JSON.stringify(dummy.key));
+  	output.push(JSON.stringify(i+'...'+dummy.key));
   	if (total - 1 == i){
-  		console.log('done reading '+i+' records');
+  		console.log('done reading '+(i+1)+' records');
 		  $('#output').html(output.join('<br>'));  		
   	}else {
   		if (total % i <= 3){
