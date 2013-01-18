@@ -66,14 +66,14 @@ function search_for(text){
     if(dummy.value.num.indexOf(text) != -1){
       console.log(i+'...yes...'+dummy.value.num)
       output.push(JSON.stringify(i+'...'+dummy.value.num));
+    }else {
+      if (total % i <= 3){
+        console.log(i+'...no...'+dummy.value.num)
+      }
     }
     if (total - 1 == i){
       console.log('done reading '+(i+1)+' records');
       $('#output').html(output.join('<br>'));     
-    }else {
-      if (total % i <= 3){
-        console.log(i+'...'+dummy.value.num)
-      }
     }
   });  
 }
