@@ -45,7 +45,7 @@ function read_all(){
 	var total = counter;
   lawnchair.each(function(dummy, i){
   	//console.log(dummy.value);
-  	output.push(dummy.value);
+  	output.push(JSON.stringify(dummy.key));
   	if (total - 1 == i){
   		console.log('done reading '+i+' records');
 		  $('#output').html(output.join('<br>'));  		
